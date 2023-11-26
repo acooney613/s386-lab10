@@ -5,7 +5,7 @@ import pandas as pd
 st.title('Popular US Names')
 
 
-'df = pd.read_html('https://www.baseball-reference.com/awards/hof.shtml')[0]
+df = pd.read_html('https://www.baseball-reference.com/awards/hof.shtml')[0]
 
 user_input = st.text_input('Enter a Year', 2023)
 
