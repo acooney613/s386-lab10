@@ -4,11 +4,14 @@ import pandas as pd
 
 #st.title('Popular US Names')
 
-df = pd.DataFrame({'column1' : [1, 2, 3, 4, 5], 'column2' : [1, 2, 3, 4, 5]})
-
-st.dataframe(df)
+url = 'https://www.baseball-reference.com/awards/hof.shtml'
+dfs = pd.read_html(url)
 
 # Display each dataframe using st.write()
+for i, df in enumerate(dfs):
+    st.write(f"DataFrame {i+1}")
+    st.dataframe(df)  # You can also use st.table(df) if you prefer a table view
+    st.write("---") 
 
 #user_input = st.text_input('Enter a Year', 2023)
 
